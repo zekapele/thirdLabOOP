@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Sudoku" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/onPrimary</item>
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="android:statusBarColor">@color/primary</item>
+        <item name="android:navigationBarColor">@color/surface</item>
+        <item name="android:windowBackground">@color/surface</item>
+    </style>
+
+    <style name="ThemeOverlay.Sudoku.Toolbar" parent="">
+        <item name="android:actionMenuTextColor">?attr/colorOnPrimary</item>
+        <item name="actionMenuTextColor">?attr/colorOnPrimary</item>
+        <item name="colorControlNormal">?attr/colorOnPrimary</item>
+    </style>
+
+    <style name="Widget.Sudoku.Segment" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Widget.Sudoku.Digit" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Widget.Sudoku.Action" parent="Widget.Material3.Button.TonalButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+</resources>

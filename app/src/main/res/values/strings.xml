@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sudoku</string>
+    <string name="difficulty_easy">Easy</string>
+    <string name="difficulty_medium">Medium</string>
+    <string name="difficulty_hard">Hard</string>
+    <string name="new_game">New game</string>
+    <string name="check">Check</string>
+    <string name="clear">Erase</string>
+    <string name="language">Українська</string>
+    <string name="status_generating">Generating a puzzle…</string>
+    <string name="status_ready">%1$s. Select a cell and enter a digit.</string>
+    <string name="status_given">This cell is a clue</string>
+    <string name="status_select">Select a cell first</string>
+    <string name="status_incomplete">Empty cells left: %1$d</string>
+    <string name="status_invalid">Mistakes on the board: %1$d</string>
+    <string name="status_solved">The solution is correct</string>
+    <string name="status_failed">Could not generate a puzzle</string>
+    <string name="cd_board">Sudoku board</string>
+</resources>

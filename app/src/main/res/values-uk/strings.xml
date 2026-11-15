@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Судоку</string>
+    <string name="difficulty_easy">Легко</string>
+    <string name="difficulty_medium">Середньо</string>
+    <string name="difficulty_hard">Важко</string>
+    <string name="new_game">Нова гра</string>
+    <string name="check">Перевірити</string>
+    <string name="clear">Стерти</string>
+    <string name="language">English</string>
+    <string name="status_generating">Створюємо головоломку…</string>
+    <string name="status_ready">%1$s. Оберіть клітинку і введіть цифру.</string>
+    <string name="status_given">Цю клітинку змінювати не можна</string>
+    <string name="status_select">Спочатку оберіть клітинку</string>
+    <string name="status_incomplete">Ще порожніх клітинок: %1$d</string>
+    <string name="status_invalid">Помилок на полі: %1$d</string>
+    <string name="status_solved">Розв\'язок правильний</string>
+    <string name="status_failed">Не вдалося створити головоломку</string>
+    <string name="cd_board">Поле судоку</string>
+</resources>

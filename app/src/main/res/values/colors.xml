@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#1B4F72</color>
+    <color name="onPrimary">#FFFFFF</color>
+    <color name="secondary">#0E6655</color>
+    <color name="surface">#F4F7FB</color>
+    <color name="boardBackground">#FFFFFF</color>
+    <color name="cellGiven">#E8EEF4</color>
+    <color name="cellSelected">#D4E6F6</color>
+    <color name="cellPeer">#F4F8FB</color>
+    <color name="cellSame">#D5F5E3</color>
+    <color name="cellConflict">#FADBD8</color>
+    <color name="gridLine">#B0BEC5</color>
+    <color name="gridBold">#1B2838</color>
+    <color name="digitGiven">#1B2838</color>
+    <color name="digitUser">#1B4F72</color>
+    <color name="digitConflict">#922B21</color>
+    <color name="statusText">#1B2838</color>
+    <color name="statusOk">#0E6655</color>
+    <color name="statusBad">#922B21</color>
+</resources>

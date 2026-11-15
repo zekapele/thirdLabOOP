@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:theme="@style/ThemeOverlay.Sudoku.Toolbar"
+        app:title="@string/app_name"
+        app:titleTextColor="?attr/colorOnPrimary" />
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/difficultyGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        app:checkedButton="@id/difficultyMedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:selectionRequired="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/difficultyEasy"
+            style="@style/Widget.Sudoku.Segment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/difficulty_easy" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/difficultyMedium"
+            style="@style/Widget.Sudoku.Segment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/difficulty_medium" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/difficultyHard"
+            style="@style/Widget.Sudoku.Segment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/difficulty_hard" />
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:textColor="@color/statusText"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/difficultyGroup"
+        tools:text="@string/status_generating" />
+
+    <com.thirdlab.sudoku.ui.SudokuBoardView
+        android:id="@+id/board"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/cd_board"
+        app:layout_constraintBottom_toTopOf="@id/digits"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/status" />
+
+    <GridLayout
+        android:id="@+id/digits"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:alignmentMode="alignBounds"
+        android:columnCount="3"
+        android:rowCount="3"
+        app:layout_constraintBottom_toTopOf="@id/actions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/digit1"
+            style="@style/Widget.Sudoku.Digit"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:text="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/digit2"
+            style="@style/Widget.Sudoku.Digit"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:text="2" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/digit3"
+            style="@style/Widget.Sudoku.Digit"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:text="3" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/digit4"
+            style="@style/Widget.Sudoku.Digit"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:text="4" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/digit5"
+            style="@style/Widget.Sudoku.Digit"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:text="5" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/digit6"
+            style="@style/Widget.Sudoku.Digit"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:text="6" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/digit7"
+            style="@style/Widget.Sudoku.Digit"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:text="7" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/digit8"
+            style="@style/Widget.Sudoku.Digit"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:text="8" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/digit9"
+            style="@style/Widget.Sudoku.Digit"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="3dp"
+            android:text="9" />
+    </GridLayout>
+
+    <LinearLayout
+        android:id="@+id/actions"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/newGame"
+            style="@style/Widget.Sudoku.Action"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:text="@string/new_game" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/check"
+            style="@style/Widget.Sudoku.Action"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:text="@string/check" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/clear"
+            style="@style/Widget.Sudoku.Action"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:text="@string/clear" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
